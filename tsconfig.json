@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@controllers": ["./controllers"],
+      "@controllers/*": ["./controllers/*"],
+
+      "@middlewares": ["./middlewares"],
+      "@middlewares/*": ["./middlewares/*"],
+
+      "@models": ["./models"],
+      "@models/*": ["./models/*"],
+
+      "@routes": ["./routes"],
+      "@routes/*": ["./routes/*"],
+
+      "@services": ["./services"],
+      "@services/*": ["./services/*"],
+
+      "@utils": ["./utils"],
+      "@utils/*": ["./utils/*"]
+    }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "files": true
+  }
+}
